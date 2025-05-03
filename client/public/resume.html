@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Awais Hussain - CV</title>
+    <style>
+        /* CV Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            border: 1px solid #ddd;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #4f46e5;
+        }
+        
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            color: #4f46e5;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 20px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .item-date {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .item-subtitle {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skills-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-item {
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        
+        .print-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .print-btn {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .print-btn:hover {
+            background-color: #4338ca;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .cv-container {
+                border: none;
+                box-shadow: none;
+            }
+            
+            .print-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>MUHAMMAD AWAIS HUSSAIN</h1>
+            <div class="title">Data Scientist & Machine Learning Engineer</div>
+            <div class="contact-info">
+                <div>Email: awais.hussain@example.com | Phone: +92 3XX XXXXXXX | Location: Islamabad, Pakistan</div>
+                <div>LinkedIn: linkedin.com/in/awais-hussain | GitHub: github.com/awaishussain | Portfolio: awaishussain.com</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>
+                Results-driven Data Scientist with expertise in Machine Learning, Computer Vision, and Natural Language Processing. 
+                Skilled in developing AI solutions that transform data into actionable insights. 
+                Proficient in Python programming with a strong foundation in statistical analysis and deep learning frameworks.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>SKILLS</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <strong>Programming:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">C++</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <strong>Machine Learning:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">Scikit-learn</span>
+                        <span class="skill-item">Keras</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <strong>Computer Vision:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">OpenCV</span>
+                        <span class="skill-item">YOLO</span>
+                        <span class="skill-item">Image Processing</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <strong>NLP:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">spaCy</span>
+                        <span class="skill-item">NLTK</span>
+                        <span class="skill-item">LangChain</span>
+                        <span class="skill-item">Transformers</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <strong>Data Engineering:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">Pandas</span>
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">Beautiful Soup</span>
+                        <span class="skill-item">Selenium</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <strong>Tools:</strong>
+                    <div class="skills-list">
+                        <span class="skill-item">Jupyter</span>
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>EXPERIENCE</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Data Scientist</div>
+                    <div class="item-date">January 2022 - Present</div>
+                </div>
+                <div class="item-subtitle">AI Solutions Ltd, Islamabad</div>
+                <ul>
+                    <li>Developed and implemented machine learning models for predictive analytics, resulting in a 25% increase in forecast accuracy.</li>
+                    <li>Created an NLP-based sentiment analysis tool that processes customer reviews across various platforms, providing actionable business insights.</li>
+                    <li>Built real-time object detection systems using computer vision techniques with 92% accuracy rate.</li>
+                    <li>Automated data collection pipelines using web scraping techniques, reducing manual work by 40%.</li>
+                    <li>Collaborated with cross-functional teams to integrate AI solutions into existing business processes.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Machine Learning Intern</div>
+                    <div class="item-date">May 2021 - December 2021</div>
+                </div>
+                <div class="item-subtitle">DataTech Solutions, Lahore</div>
+                <ul>
+                    <li>Assisted in developing deep learning models for image classification problems.</li>
+                    <li>Performed data preprocessing and feature engineering to improve model performance.</li>
+                    <li>Created interactive dashboards using Streamlit to visualize model results and insights.</li>
+                    <li>Participated in regular code reviews and implemented best practices in ML development.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>PROJECTS</h2>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Intelligent Chatbot</div>
+                </div>
+                <p>
+                    Developed an AI-powered conversational agent using LangChain, LlamaIndex, and Transformers. The chatbot integrates with Flask to provide a web interface, enabling complex query understanding and natural language responses with contextual awareness.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Object Detection System</div>
+                </div>
+                <p>
+                    Built a real-time object detection application using TensorFlow, OpenCV, and Keras. The system can identify and classify objects in images and video streams with high accuracy, supporting multiple detection algorithms including YOLO.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Data Analysis Dashboard</div>
+                </div>
+                <p>
+                    Created an interactive business analytics dashboard with Streamlit and Pandas, enabling real-time data processing and visualization. The system includes customizable views and automated reporting capabilities.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Web Scraping Pipeline</div>
+                </div>
+                <p>
+                    Developed an automated data collection system using Beautiful Soup and Selenium that extracts, transforms, and loads data from various websites into structured databases for further analysis.
+                </p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>EDUCATION</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">MSc in Data Science</div>
+                    <div class="item-date">2019 - 2021</div>
+                </div>
+                <div class="item-subtitle">National University of Sciences and Technology (NUST), Islamabad</div>
+                <p>
+                    Specialized in Machine Learning and Artificial Intelligence. Graduated with Distinction.
+                </p>
+            </div>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">BSc in Computer Science</div>
+                    <div class="item-date">2015 - 2019</div>
+                </div>
+                <div class="item-subtitle">Lahore University of Management Sciences (LUMS), Lahore</div>
+                <p>
+                    Focused on algorithms, data structures, and computational mathematics. Dean's List for academic excellence.
+                </p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>CERTIFICATIONS</h2>
+            <ul>
+                <li>Deep Learning Specialization - Coursera (Andrew Ng)</li>
+                <li>TensorFlow Developer Certificate - Google</li>
+                <li>Microsoft Certified: Azure Data Scientist Associate</li>
+                <li>Natural Language Processing with Python - DataCamp</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="print-buttons">
+        <button class="print-btn" onclick="window.print()">Print CV</button>
+        <a class="print-btn" id="download-link" href="javascript:void(0)" download="Muhammad_Awais_Hussain_CV.pdf" style="text-decoration: none;">Download PDF</a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.getElementById('download-link').addEventListener('click', function() {
+            const element = document.querySelector('.cv-container');
+            const opt = {
+                margin:       [0.5, 0.5, 0.5, 0.5],
+                filename:     'Muhammad_Awais_Hussain_CV.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            // Hide buttons while generating PDF
+            document.querySelector('.print-buttons').style.display = 'none';
+            
+            // Generate PDF
+            html2pdf().set(opt).from(element).save().then(function() {
+                // Show buttons again
+                document.querySelector('.print-buttons').style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>

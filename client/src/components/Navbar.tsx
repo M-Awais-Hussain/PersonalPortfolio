@@ -50,7 +50,8 @@ const Navbar = () => {
           
           <a 
             href={RESUME_URL} 
-            download="Muhammad_Awais_Hussain_Resume.pdf"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 flex items-center gap-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -91,7 +92,8 @@ const Navbar = () => {
               
               <a 
                 href={RESUME_URL} 
-                download="Muhammad_Awais_Hussain_Resume.pdf"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 flex items-center gap-2"
                 onClick={closeMenu}
               >

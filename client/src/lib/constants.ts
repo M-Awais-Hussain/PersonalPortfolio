@@ -38,8 +38,8 @@ export const NAV_LINKS = [
   { name: "Contact", href: "#contact" }
 ];
 
-// Resume download URL - update this to actual path
-export const RESUME_URL = "/resume.pdf";
+// Resume download URL - points to our HTML resume
+export const RESUME_URL = "/resume.html";
 
 // API endpoint
 export const CONTACT_API_ENDPOINT = "/api/contact";
