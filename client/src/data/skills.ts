@@ -1,12 +1,20 @@
 import { ReactNode } from "react";
 
-// Programming Languages Skills - without percentages as requested
+// Define skill categories for filtering
+export type SkillCategory = 
+  | 'all'
+  | 'machine-learning'
+  | 'computer-vision'
+  | 'nlp'
+  | 'web-development'
+  | 'data-science';
+
+// Programming Languages Skills - without R as requested
 export const languageSkills = [
   { name: "Python" },
   { name: "SQL" },
   { name: "Java" },
-  { name: "C++" },
-  { name: "R" }
+  { name: "C++" }
 ];
 
 // Domain Skills - Computer Vision and NLP as requested
@@ -14,103 +22,135 @@ export const domainSkills = [
   {
     name: "Computer Vision",
     description: "Image processing, object detection, and recognition",
-    icon: "📷"
+    icon: "📷",
+    category: "computer-vision" as SkillCategory
   },
   {
     name: "Natural Language Processing",
     description: "Text analysis, sentiment analysis, and language generation",
-    icon: "💬"
+    icon: "💬",
+    category: "nlp" as SkillCategory
   },
   {
     name: "Machine Learning",
     description: "Classification, regression, and clustering algorithms",
-    icon: "🧠"
+    icon: "🧠",
+    category: "machine-learning" as SkillCategory
   },
   {
     name: "Deep Learning",
     description: "Neural networks and advanced pattern recognition",
-    icon: "🔮"
+    icon: "🔮",
+    category: "machine-learning" as SkillCategory
   },
   {
     name: "Generative AI",
     description: "LLMs, diffusion models, and content generation",
-    icon: "✨"
+    icon: "✨",
+    category: "machine-learning" as SkillCategory
   }
 ];
 
-// Technology & Framework Skills - Updated with more ML/AI frameworks
+// Technology & Framework Skills - Added Web Scraping libraries
 export const techSkills = [
   { 
     name: "TensorFlow", 
-    icon: "📊"
+    icon: "📊",
+    category: "machine-learning" as SkillCategory
   },
   { 
     name: "PyTorch", 
-    icon: "🔥"
+    icon: "🔥",
+    category: "machine-learning" as SkillCategory
   },
   { 
     name: "Keras", 
-    icon: "🧩"
+    icon: "🧩",
+    category: "machine-learning" as SkillCategory
   },
   { 
     name: "Pandas", 
-    icon: "🐼"
+    icon: "🐼",
+    category: "data-science" as SkillCategory
   },
   { 
     name: "NumPy", 
-    icon: "🔢"
+    icon: "🔢",
+    category: "data-science" as SkillCategory
   },
   { 
     name: "Scikit-learn", 
-    icon: "🔍"
+    icon: "🔍",
+    category: "machine-learning" as SkillCategory
   },
   { 
     name: "OpenCV", 
-    icon: "👁️"
+    icon: "👁️",
+    category: "computer-vision" as SkillCategory
+  },
+  { 
+    name: "Beautiful Soup", 
+    icon: "🍲",
+    category: "data-science" as SkillCategory
+  },
+  { 
+    name: "Selenium", 
+    icon: "🌐",
+    category: "data-science" as SkillCategory
   },
   { 
     name: "Hugging Face", 
-    icon: "🤗"
+    icon: "🤗",
+    category: "nlp" as SkillCategory
   },
   { 
     name: "spaCy", 
-    icon: "🔤"
+    icon: "🔤",
+    category: "nlp" as SkillCategory
   },
   { 
     name: "NLTK", 
-    icon: "📝"
+    icon: "📝",
+    category: "nlp" as SkillCategory
   },
   { 
     name: "LangChain", 
-    icon: "⛓️"
+    icon: "⛓️",
+    category: "nlp" as SkillCategory
   },
   { 
     name: "LlamaIndex", 
-    icon: "📚"
+    icon: "📚",
+    category: "nlp" as SkillCategory
   },
   { 
     name: "Flask", 
-    icon: "🌐"
+    icon: "🌐",
+    category: "web-development" as SkillCategory
   },
   { 
     name: "FastAPI", 
-    icon: "⚡"
+    icon: "⚡",
+    category: "web-development" as SkillCategory
   },
   { 
     name: "Streamlit", 
-    icon: "📊"
+    icon: "📊",
+    category: "web-development" as SkillCategory
   },
   { 
     name: "YOLO", 
-    icon: "🎯"
+    icon: "🎯",
+    category: "computer-vision" as SkillCategory
   },
   { 
     name: "Transformers", 
-    icon: "🤖"
+    icon: "🤖",
+    category: "nlp" as SkillCategory
   }
 ];
 
-// Tool Skills
+// Tool Skills - removed Docker as requested
 export const toolSkills = [
   { 
     name: "Power BI", 
@@ -147,10 +187,6 @@ export const toolSkills = [
   { 
     name: "Git", 
     icon: "🔄"
-  },
-  { 
-    name: "Docker", 
-    icon: "🐳"
   }
 ];
 
