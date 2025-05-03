@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 244 90% 59%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 151 90% 40%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 244 75% 63%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  --chart-1: 244 90% 59%;
+  --chart-2: 151 90% 40%;
+  --chart-3: 244 75% 63%;
+  --chart-4: 266 90% 64%;
+  --chart-5: 33 90% 55%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 244 90% 59%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 151 90% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 244 75% 63%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  --chart-1: 244 90% 59%;
+  --chart-2: 151 90% 40%;
+  --chart-3: 244 75% 63%;
+  --chart-4: 266 90% 64%;
+  --chart-5: 33 90% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.glass {
+  @apply bg-white/15 backdrop-blur-lg border border-white/20;
+}
+
+.dark .glass {
+  @apply bg-black/65 border-white/10;
+}
+
+.skill-bar {
+  transition: width 1s ease-in-out;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: currentColor;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
