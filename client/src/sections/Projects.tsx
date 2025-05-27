@@ -1,15 +1,18 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { projects } from "@/data/projects";
-import { SkillCategory } from "@/data/skills";
+
+type SkillCategory = "all" | "machine-learning" | "computer-vision" | "nlp" | "generative-ai" | "data-science" | "web-development" | "data analysis" ;
 
 const filterCategories = [
   { name: "All", value: "all" },
   { name: "Machine Learning", value: "machine-learning" },
   { name: "Computer Vision", value: "computer-vision" },
   { name: "NLP", value: "nlp" },
+  { name: "Generative-AI", value: "generative-ai" },
   { name: "Data Science", value: "data-science" },
-  { name: "Web Development", value: "web-development" }
+  { name: "Web Development", value: "web-development" },
+  { name: "Data Analysis", value: "data-analysis" },
 ];
 
 const Projects = () => {
@@ -121,7 +124,7 @@ const Projects = () => {
                         </svg>
                         View Code
                       </a>
-                      <a 
+                      {/* <a 
                         href={project.demo} 
                         className="text-primary dark:text-secondary hover:underline flex items-center text-sm" 
                         target="_blank" 
@@ -133,7 +136,7 @@ const Projects = () => {
                           <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                         Live Demo
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </motion.div>
@@ -158,7 +161,7 @@ const Projects = () => {
           </motion.div>
         </AnimatePresence>
         
-        <motion.div 
+        {/* <motion.div 
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -174,7 +177,7 @@ const Projects = () => {
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

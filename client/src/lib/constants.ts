@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   email: "awaishussain4444@gmail.com",
   phone: "+92 308 8497811",
   linkedin: "https://www.linkedin.com/in/muhammad-awais-hussain-4424b1232",
-  github: "https://github.com", // Replace with actual GitHub URL
+  github: "https://github.com/M-Awais-Hussain", // Replace with actual GitHub URL
   education: {
     degree: "Bachelor of Software Engineering",
     university: "University of Engineering and Technology, Taxila",
