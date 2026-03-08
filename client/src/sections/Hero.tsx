@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden py-16 md:py-0">
       <div className="absolute inset-0 z-0 gradient-bg"></div>
       
-      <div className="container mx-auto px-6 py-12 z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12 z-10">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
           <motion.div 
-            className="md:w-1/2 mb-10 md:mb-0 z-10 pl-6 md:pl-12"  // ✅ Added padding-left
+            className="w-full md:w-1/2 z-10 space-y-6 text-center md:text-left md:pl-8 lg:pl-16"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -96,7 +96,7 @@ const Hero = () => {
           </motion.div>
           
           <motion.div 
-            className="md:w-1/2 flex justify-center"
+            className="w-full md:w-1/2 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}

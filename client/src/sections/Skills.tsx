@@ -26,14 +26,14 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 relative" ref={sectionRef}>
+    <section id="skills" className="pt-12 pb-4 md:pt-20 md:pb-8 relative" ref={sectionRef}>
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-tr from-gray-50 to-gray-100 dark:from-gray-900 dark:to-dark opacity-80"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
@@ -41,22 +41,22 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
             My <span className="text-primary dark:text-secondary">Skills</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-400 px-4">
             I specialize in data science, machine learning, and AI development with expertise in various technologies.
           </p>
         </motion.div>
 
-        {/* 1. Domain Expertise */}
+        {/* Domain Expertise */}
         <motion.div
-          className="mb-16"
+          className="mb-8 md:mb-16"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="text-2xl font-semibold mb-8 text-center text-gray-800 dark:text-white">
+          <h3 className="text-2xl font-semibold mb-6 md:mb-8 text-center text-gray-800 dark:text-white">
             Domain <span className="text-primary dark:text-secondary">Expertise</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {domainSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -75,9 +75,9 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* 2. Programming Languages */}
+        {/* Programming Languages */}
         <motion.div
-          className="mb-16"
+          className="mb-8 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -89,7 +89,7 @@ const Skills = () => {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
           >
             {languageSkills.map((skill, index) => (
               <motion.div
@@ -173,7 +173,7 @@ const Skills = () => {
 
         {/* 5. Soft Skills */}
         <motion.div
-          className="mb-16"
+          className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}

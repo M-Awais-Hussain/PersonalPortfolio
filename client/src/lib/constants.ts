@@ -1,4 +1,4 @@
-// Personal information
+﻿// Personal information
 export const PERSONAL_INFO = {
   name: "Muhammad Awais Hussain",
   title: "Data Scientist",
@@ -34,12 +34,12 @@ export const TYPING_PHRASES = [
 export const NAV_LINKS = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "Projects", href: "/projects" },
   { name: "Contact", href: "#contact" }
 ];
 
-// Resume download URL - points to our HTML resume
-export const RESUME_URL = "/resume.html";
+// Resume download URL - now points directly to PDF
+export const RESUME_URL = "/resume.pdf";
 
 // API endpoint
 export const CONTACT_API_ENDPOINT = "/api/contact";

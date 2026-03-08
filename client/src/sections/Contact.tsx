@@ -1,4 +1,4 @@
-import { useRef } from "react";
+﻿import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -63,12 +63,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative" ref={sectionRef}>
+    <section id="contact" className="py-12 md:py-20 relative" ref={sectionRef}>
       <div className="absolute inset-0 z-0 gradient-bg"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
@@ -76,18 +76,18 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
             Get In <span className="text-primary dark:text-secondary">Touch</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-400 px-4">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="glass rounded-xl p-6 shadow-lg mb-8">
+            <div className="glass rounded-xl p-4 md:p-6 shadow-lg mb-6 md:mb-8">
               <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-white flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary dark:text-secondary mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>

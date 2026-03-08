@@ -1,6 +1,7 @@
-﻿// skills.tsx
+// skills.tsx
 
 import { ReactNode } from "react";
+
 
 // Programming Languages Skills
 export const languageSkills = [
@@ -16,7 +17,7 @@ export const domainSkills = [
   { name: "Natural Language Processing", description: "Text analysis, sentiment analysis, and language generation", icon: <img src="images/nlp.png" alt="NLP Icon" width={35} height={35} /> },
   { name: "Machine Learning", description: "Classification, regression, and clustering algorithms", icon: <img src="images/machinelearning.png" alt="Machine Learning Icon" width={35} height={35} /> },
   { name: "Deep Learning", description: "Neural networks and advanced pattern recognition", icon: <img src="images/deeplearning.jpeg" alt="Deep Learning Icon" width={35} height={35} /> },
-  { name: "Generative AI", description: "LLMs, diffusion models, and content generation", icon: <img src="images/genAI.png" alt="Generative AI Icon" width={35} height={35} /> },
+  { name: "Generative & Agentic AI", description: "LLMs, diffusion models, and content generation", icon: <img src="images/genAI.png" alt="Generative AI Icon" width={35} height={35} /> },
 ];
 
 // Technology & Framework Skills
@@ -45,7 +46,7 @@ export const techSkills = [
 export const toolSkills = [
   { name: "Power BI", icon: <img src="/images/powerBi.png" alt="Power BI Logo" width={24} height={24} /> },
   { name: "Excel", icon: <img src="/images/excel.png" alt="Excel Logo" width={35} height={35} /> },
-  { name: "PowerPoint", icon: <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019–present%29.svg" alt="PowerPoint Logo" width={24} height={24} /> },
+  { name: "PowerPoint", icon: <img src="/images/powerpoint.png" alt="PowerPoint Logo" width={24} height={24} /> },
   { name: "Oracle SQL", icon: <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle SQL Logo" width={35} height={35} /> },
   { name: "Jupyter Notebook", icon: <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter Notebook Logo" width={24} height={24} /> },
   { name: "Google Colab", icon: <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Google Colab Logo" width={35} height={35} /> },

@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { NAV_LINKS, RESUME_URL } from "@/lib/constants";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,28 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith("#")) {
+      if (location === "/") {
+        const element = document.getElementById(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        window.location.href = "/";
+        setTimeout(() => {
+          const element = document.getElementById(href.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      }
+    } else {
+      window.location.href = href;
+    }
+    closeMenu();
+  };
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "glass" : "bg-transparent"}`}>
       <nav className="container mx-auto py-4 px-6 flex justify-between items-center">
@@ -37,21 +60,20 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           {NAV_LINKS.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
+              onClick={() => handleNavClick(link.href)}
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
             >
               {link.name}
-            </a>
+            </button>
           ))}
           
           <ThemeToggle />
           
           <a 
-            href={RESUME_URL} 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href={RESUME_URL}
+            download="Muhammad_Awais_Hussain_Resume.pdf"
             className="py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 flex items-center gap-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -59,7 +81,7 @@ const Navbar = () => {
               <polyline points="15 3 21 3 21 9"></polyline>
               <line x1="10" y1="14" x2="21" y2="3"></line>
             </svg>
-            View CV
+            Download CV
           </a>
         </div>
         
@@ -77,23 +99,21 @@ const Navbar = () => {
         <div className="md:hidden glass py-4 px-6 animate-in fade-in slide-in-from-top">
           <div className="flex flex-col space-y-4">
             {NAV_LINKS.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
-                onClick={closeMenu}
+                onClick={() => handleNavClick(link.href)}
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors text-left"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
             
             <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
               <ThemeToggle />
               
               <a 
-                href={RESUME_URL} 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href={RESUME_URL}
+                download="Muhammad_Awais_Hussain_Resume.pdf"
                 className="py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 flex items-center gap-2"
                 onClick={closeMenu}
               >
@@ -102,7 +122,7 @@ const Navbar = () => {
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                View CV
+                Download CV
               </a>
             </div>
           </div>
